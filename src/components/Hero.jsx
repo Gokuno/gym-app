@@ -9,6 +9,7 @@ export default function Hero() {
         <h1 className='uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>Musclo<span className='text-blue-400'>sisimo</span></h1>
         </div>
         <p className='text-sm md:text-base font-light'>Por la presente reconozco que puedo hacerme <span className='text-blue-400 font-medium'>increíblemente enorme</span> y aceptar todos los riesgos de convertirse en una <span className='text-blue-400 font-medium'>masa monstruosa</span> local, afectado con dismorfia corporal severa, incapaz de pasar por las puertas.</p>
+        <p>CREADO POR JORGE ALLAN PAZ</p>
         <Button func={() => {
           window.location.href = '#generate'
         }} text={"Acepta y Empieza"}></Button>
