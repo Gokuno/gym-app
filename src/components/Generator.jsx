@@ -50,8 +50,8 @@ export default function Generator(props) {
 }
 
   return (
-    <SectionWrapper id={'generate'} header={"Genera tu ejercicio"} title={['Es', 'Hora', 'De', 'Fortalecerte']}>
-      <Header index={'01'} title={'Escoje tu veneno'} description={"Selecciona el ejercicio a realizar"} />
+    <SectionWrapper id={'generate'} header={"Generate your program"} title={['It\'s', 'Fitness', 'Time' ]}>
+      <Header index={'01'} title={'Workout routine'} description={"Select the split or workout routine."} />
 
       <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
       {Object.keys(WORKOUTS).map((type, typeIndex) => {
@@ -66,11 +66,11 @@ export default function Generator(props) {
       })}
       </div>
 
-      <Header index={'02'} title={'Mira en el blanco'} description={"Selecciona el grupo de musculos"} />
+      <Header index={'02'} title={'Muscles to target'} description={"Select the body part to work on."} />
 
       <div className='bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col'>
         <button onClick={toggleModal} className='relative p-3 flex items-center justify-center'>
-          <p className='capitalize'>{muscles.length == 0 ? 'Selecciona grupo de musclos' : muscles.join(' ')}</p>
+          <p className='capitalize'>{muscles.length == 0 ? 'Select the body part' : muscles.join(' ')}</p>
           <i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
         </button>
         {showModal && (
@@ -87,7 +87,7 @@ export default function Generator(props) {
           </div>
         )}
       </div>
-      <Header index={'03'} title={'Conviertete en un gigante'} description={"Selecciona tu objetivo final."} />
+      <Header index={'03'} title={'Your main goal'} description={"Select the goal of your workout."} />
 
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
       {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
@@ -100,7 +100,7 @@ export default function Generator(props) {
         )
       })}
       </div>
-      <Button func={updateWorkout} text={"Formula"}></Button>
+      <Button func={updateWorkout} text={"Formulate"}></Button>
     </SectionWrapper>
     
   )
